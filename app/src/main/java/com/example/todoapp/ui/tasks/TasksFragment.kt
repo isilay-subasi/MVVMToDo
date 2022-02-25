@@ -9,9 +9,17 @@ import com.example.todoapp.R
 import com.example.todoapp.databinding.FragmentTaskBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+
+/*
+* Hilt, yalnızca @AndroidEntryPoint ile açıklamalı sınıflara bağımlılık sağlar.
+* */
+
 @AndroidEntryPoint
 class TasksFragment : Fragment(R.layout.fragment_task) {
 
+    /*Basitçe bir ViewModel talep edemeyeceğinizi unutmayın. ViewModelProvider API'sini kullanarak ViewModel'i oluştururken.
+     *Parçanız/aktiviteniz içinde bir ViewModel istemek için aşağıdaki kodu kullanın.
+     * */
     private val viewModel : TasksViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

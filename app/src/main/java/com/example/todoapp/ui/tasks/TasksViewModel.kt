@@ -7,6 +7,10 @@ import com.example.todoapp.data.TaskDao
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+/*
+* Hilt, ViewModel'i destekler ve bu nedenle ViewModels ile çalışmak hilt ile çok kolaydır.
+* */
+
 @HiltViewModel
 class TasksViewModel @Inject constructor(
     private val taskDao : TaskDao

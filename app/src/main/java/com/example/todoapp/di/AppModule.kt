@@ -15,6 +15,11 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    /*
+    * @InsallIn() Modül oluştururken Hilt'e onun nereye oluşturacağını söylemeliyiz.
+    * Yani yukarıdaki kodda hilt'e bu modülün SingletonComponent için olduğunu söylüyorum.
+    * SingletonComponent,Bileşen Hiyerarşisinin en üst sınıfıdır.
+    * */
 
     @Provides
     @Singleton

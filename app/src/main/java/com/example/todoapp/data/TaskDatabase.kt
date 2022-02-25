@@ -14,6 +14,15 @@ abstract class TaskDatabase : RoomDatabase() {
 
     abstract fun taskDao() : TaskDao
 
+    //@Inject : İstendiğinde bana callback sınıfından nesne üret.
+    /*
+    * Bu yüzden bağımlı sınıflara da @Inject eklememiz gerekiyor.
+    * Ancak her zaman inject yapamayız, bunun mümkün olmadığı durumlar vardır.
+    * Provider bir interface'dir.Bu yüzden onu inject edemeyiz."Retrofit gibi database gibi"
+    * Bunları nasıl inject etmesi gerektiğini söylememiz gerekir.Bunun içinde modül oluşturuyoruz.
+    *
+    * */
+
     class Callback @Inject constructor(
         private val database : Provider<TaskDatabase>,
         @ApplicationScope private val applicationScope : CoroutineScope
