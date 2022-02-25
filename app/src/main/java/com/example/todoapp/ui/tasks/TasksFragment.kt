@@ -12,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 /*
 * Hilt, yalnızca @AndroidEntryPoint ile açıklamalı sınıflara bağımlılık sağlar.
+*
 * */
 
 @AndroidEntryPoint
